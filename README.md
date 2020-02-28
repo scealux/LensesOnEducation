@@ -1,2 +1,0 @@
-# LensesOnEducation
-Created with CodeSandbox
