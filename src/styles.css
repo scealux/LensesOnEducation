@@ -1,13 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap");
-
 body {
-  font-family: sans-serif;
+  font: 1em "Proxima Nova", sans-serif;
   margin: 0px;
   padding: 0px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 button {
   border: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 i {
@@ -16,50 +22,133 @@ i {
 
 #flexNav {
   height: 50px;
+  width: 80%;
+  margin: 0px auto 0px auto;
   display: flex;
   text-align: right;
   align-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 10vw;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .flexItem {
-  font: 1em "Major Mono Display", sans-serif;
-  display: grid;
+  font: 1em "Proxima Nova", sans-serif;
+  font-weight: 900;
+  color: white;
+  display: inline;
   margin: 0px;
-  padding-right: 20px;
-  height: 35px;
+  height: 50px;
   align-content: center;
-  flex: 2 0.25 auto; /*grow - shrink - basis*/
+  flex: 2 0.1 auto; /*grow - shrink - basis*/
   font-size: 1em;
-  transition: flex 200ms, font-size 200ms;
+  opacity: 1;
+  transition: flex 200ms, font-size 200ms, opacity 200ms;
 }
 
 .flexItem:hover {
   flex-basis: auto;
   font-size: 1.25em;
   flex: 20 0 auto;
+  opacity: 0.6;
+}
+
+.flexItem i {
+  font-size: 1em;
 }
 
 .navSelected {
-  flex-basis: auto;
   font-size: 1.25em;
   flex: 20 0 auto;
 }
 
+#contents {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  display: block;
+
+  border-radius: 5vw;
+
+  background-color: #fcebf6;
+  transition: background-color 2s;
+}
+
 #title {
-  font: 4em "Major Mono Display";
+  font: 5em "Proxima Nova";
+  font-weight: 900;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #humNav {
-  background: magenta;
+  background: #ec008c;
 }
 
 #devNav {
-  background: cyan;
+  background: #00aeef;
 }
 
 #socEff {
-  background: yellow;
+  background: #eaca0c;
+}
+
+#madLibs {
+  display: grid;
+  margin: 0px auto 0px auto;
+  width: 80%;
+  height: 400px;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas:
+    "p1 a1"
+    "p2 a2"
+    "p3 a3"
+    "p4 a4";
+}
+
+#mlP1 {
+  grid-area: p1;
+}
+#mlA1 {
+  grid-area: a1;
+}
+
+#mlP2 {
+  grid-area: p2;
+}
+#mlA2 {
+  grid-area: a2;
+}
+
+#mlP3 {
+  grid-area: p3;
+}
+#mlA3 {
+  grid-area: a3;
+}
+
+#mlP4 {
+  grid-area: p4;
+}
+#mlA4 {
+  grid-area: a4;
+}
+
+.qC {
+  text-align: left;
 }
 
 .twoBox {
@@ -67,25 +156,47 @@ i {
   text-align: center;
   justify-self: center;
 
-  width: 100%;
-  height: 400px;
-  border: 1px solid green;
+  width: 60%;
+  height: 300px;
+  margin: 0px auto -80px auto;
   grid-template-rows: 100%;
   grid-template-columns: 50% 50%;
   grid-template-areas: "leftSide rightSide";
 }
 
-.thin {
-  height: 200px !important;
+.blockText {
+  width: 70%;
+  margin: 20px auto 40px auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.pic {
+  font-size: 10em;
+  transition: font-size 200ms;
+}
+
+.pic:hover {
+  font-size: 11em;
+}
+
+b {
+  display: block;
+  font-size: 1.25em;
+  padding-bottom: 10px;
+}
+
+#sourcesDiv {
+  height: 100px;
+  margin: 80px auto 20px auto;
 }
 
 .prompt {
-  font: 1.5em "Major Mono Display";
+  font: 1.25em "Proxima Nova";
+  font-weight: 700;
+  padding-right: 40px;
+  text-align: right;
   color: black;
-}
-
-.response {
-  color: yellow;
 }
 
 .vCenter {
@@ -94,20 +205,4 @@ i {
 
 .centerText {
   grid-column: 0 2;
-}
-
-.leftText {
-  grid-area: leftSide;
-}
-
-.rightText {
-  grid-area: rightSide;
-}
-
-leftImage {
-  grid-area: leftSide;
-}
-
-rightImage {
-  grid-area: rightSide;
 }

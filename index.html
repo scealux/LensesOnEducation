@@ -7,84 +7,82 @@
       src="https://kit.fontawesome.com/18d19bb599.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/kqb6iea.css" />
   </head>
 
   <body>
+    <div>
+      <h1 id="title">
+        Views on Education
+      </h1>
+    </div>
+
     <div id="flexNav">
-      <button id="humNav" class="flexItem">
+      <button id="humNav" class="flexItem navSelected">
         Humanist
+        <span><i class="fas fa-male"></i></span>
       </button>
       <button id="devNav" class="flexItem">
         Developmental / Progressive
+        <span><i class="fas fa-users"></i></span>
       </button>
       <button id="socEff" class="flexItem">
         Social Efficiency
+        <span><i class="fas fa-industry"></i></span>
       </button>
     </div>
-    <div id="contents" class="centerText">
-      <div class="twoBox">
-        <h1 id="title" class="vCenter centerText">
-          Lenses on <br />
-          Education
-        </h1>
-      </div>
 
-      <div id="thePurpose" class="twoBox thin">
-        <div class="prompt leftSide vCenter">
+    <div id="contents" class="centerText">
+      <!--Top Contents-->
+      <div id="madLibs" class="container">
+        <div id="mlP1" class="prompt leftSide vCenter">
           The purpose of school is to
         </div>
-        <div id="thePurposeC" class="centerText vCenter"></div>
-      </div>
+        <div id="mlA1" class="qC vCenter"></div>
 
-      <div id="aTeachers" class="twoBox thin">
-        <div class="prompt leftSide vCenter">
+        <div id="mlP2" class="prompt leftSide vCenter">
           A teachers job is to
         </div>
-        <div id="aTeachersC" class="centerText vCenter"></div>
-      </div>
+        <div id="mlA2" class="qC vCenter"></div>
 
-      <div id="studentsCan" class="twoBox thin">
-        <div class="prompt leftSide vCenter">
+        <div id="mlP3" class="prompt leftSide vCenter">
           Students can be seen as
         </div>
-        <div id="studentsCanC" class="centerText vCenter"></div>
-      </div>
+        <div id="mlA3" class="qC vCenter"></div>
 
-      <div id="whoseRole" class="twoBox thin">
-        <div class="prompt leftSide vCenter">
+        <div id="mlP4" class="prompt leftSide vCenter">
           whose role is to
         </div>
-        <div id="whoseRoleC" class="centerText vCenter"></div>
+        <div id="mlA4" class="qC vCenter"></div>
+      </div>
+      <!---->
+
+      <div class="blockText">
+        <b>In My Experience...</b>
+        <div id="myExp"></div>
       </div>
 
-      <div id="quote1" class="twoBox">
+      <div class="twoBox">
         <div class="vCenter">
-          <img id="q1Pic" src="https://via.placeholder.com/300" />
+          <div id="q1Pic"></div>
         </div>
-        <div class="vCenter" id="quote1C">
+        <div class="vCenter" id="quote1">
           quoteContents
         </div>
       </div>
 
-      <div id="quote2" class="twoBox">
-        <div class="vCenter">
+      <div class="twoBox">
+        <div class="vCenter" id="quote2">
           quote2
         </div>
-        <div class="vCenter" id="quote2C">
-          <img id="q2Pic" src="https://via.placeholder.com/300" />
+        <div class="vCenter">
+          <div id="q2Pic"></div>
         </div>
       </div>
 
-      <div id="myExperience" class="twoBox">
-        In my Experience
-        <div id="myExC"></div>
-      </div>
-
-      <div id="sources" class="twoBox">
-        <div>
-          Sources
-        </div>
-        <div id="sourcesC"></div>
+      <div id="sourcesDiv">
+        Sources
+        <div id="sources"></div>
       </div>
     </div>
 
